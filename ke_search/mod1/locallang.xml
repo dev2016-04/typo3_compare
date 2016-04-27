@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for module &quot;web_txkesearchM1&quot;</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="title">Faceted Search</label>
+			<label index="function1">Start indexing</label>
+			<label index="function2">Indexed content</label>
+			<label index="function3">Index table information</label>
+			<label index="function4">Searchword statistics</label>
+			<label index="function5">Clear search index</label>
+			<label index="select_a_page">Please select a page.</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="title">Facettierte Suche</label>
+			<label index="function1">Indizierung anstossen</label>
+			<label index="function2">Indizierte Inhalte</label>
+			<label index="function3">Informationen über Index-Tabelle</label>
+			<label index="function4">Suchwort-Statistik</label>
+			<label index="function5">Suchindex leeren</label>
+			<label index="select_a_page">Bitte wählen Sie eine Seite aus.</label>
+		</languageKey>
+		<languageKey index="nl" type="array">
+			<label index="title">Facet Zoeken</label>
+			<label index="function1">Start indexeren</label>
+			<label index="function2">Geindexeerde inhoud</label>
+			<label index="function3">Index tabel informatie</label>
+			<label index="function4">Zoekwoorden statistieken</label>
+			<label index="function5">Wis zoek index</label>
+			<label index="select_a_page">Selecteer een pagina</label>
+		</languageKey>
+	</data>
+</T3locallang>
