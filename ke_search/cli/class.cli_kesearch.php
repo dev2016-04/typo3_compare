@@ -40,7 +40,8 @@ class tx_kesearch_cli extends t3lib_cli {
     function tx_kesearch_cli () {
 
         // Running parent class constructor
-        parent::t3lib_cli();
+        //parent::__construct();
+	$this->cli_setArguments($_SERVER['argv']);
 
         // Setting help texts:
         $this->cli_help['name'] = 'ke_search Command Line Interface';

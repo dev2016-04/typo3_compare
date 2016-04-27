@@ -663,17 +663,17 @@ $TCA['tx_kesearch_indexerconfig'] = array (
 			)
 		),
 		'directories' => array (
-			'exclude' => 0,
-			'label' => 'LLL:EXT:ke_search/locallang_db.xml:tx_kesearch_indexerconfig.directories',
-			'displayCond' => 'FIELD:type:IN:file',
-			'config' => array (
-				'type' => 'group',
-				'internal_type' => 'folder',
-				'size' => 5,
-				'minitems' => 0,
-				'maxitems' => 10,
-			)
-		),
+                        'exclude' => 0,
+                        'label' => 'LLL:EXT:ke_search/locallang_db.xml:tx_kesearch_indexerconfig.directories',
+                        'displayCond' => 'FIELD:type:IN:file',
+                        'config' => array (
+                                'type' => 'group',
+                                'internal_type' => 'folder',
+                                'size' => 5,
+                                'minitems' => 0,
+                                'maxitems' => 100,
+                        )
+                ),
 		'fileext' => array (
 			'exclude' => 0,
 			'label' => 'LLL:EXT:ke_search/locallang_db.xml:tx_kesearch_indexerconfig.fileext',

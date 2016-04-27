@@ -180,6 +180,7 @@ function hideSpinner() {
 <!-- ###JS_SEARCH_AJAX_RELOAD### end -->
 
 <!-- ###SEARCHBOX_STATIC### start -->
+
 <form method="get" id="xajax_form_kesearch_pi1" name="xajax_form_kesearch_pi1"  action="###FORM_ACTION###" class="static" ###ONSUBMIT###>
 	<fieldset class="kesearch_searchbox">
 	<input type="hidden" name="id" value="###FORM_TARGET_PID###" />
@@ -187,9 +188,10 @@ function hideSpinner() {
 
 	<div class="kesearchbox">
 		<input type="text" id="ke_search_sword" name="tx_kesearch_pi1[sword]"  value="###SWORD_VALUE###" onfocus="###SWORD_ONFOCUS###" />
-		<input type="image" id="kesearch_submit" src="typo3conf/ext/ke_search/res/img/kesearch_submit.png" alt="###SUBMIT_VALUE###" class="submit" onclick="document.getElementById('pagenumber').value=1; document.getElementById('xajax_form_kesearch_pi1').submit();" />
+                <input type="submit" id="kesearch_submit" value="Search" alt="###SUBMIT_VALUE###" class="submit" onclick="document.getElementById('pagenumber').value=1; document.getElementById('xajax_form_kesearch_pi1').submit();" />
 		<div class="clearer">&nbsp;</div>
 	</div>
+
 
 	<input id="pagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="###HIDDEN_PAGE_VALUE###" />
 	<input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
@@ -201,8 +203,6 @@ function hideSpinner() {
 	<!-- ###SHOW_SPINNER### begin -->
 	<div id="kesearch_updating_filters">###SPINNER###<br /></div>
 	<!-- ###SHOW_SPINNER### end -->
-	<span class="resetbutt">###RESET###</span>
-	<span class="submitbutt">###SUBMIT###</span>
 	</fieldset>
 
 </form>

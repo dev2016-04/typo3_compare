@@ -20,9 +20,6 @@
     padding: 0.3em 0.3em 0.3em 0.4em;
     background: white;
     border: 1px solid #bbbbbb;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #2b2b2b;
     font-size: 12px;
@@ -43,24 +40,15 @@ span.resetbutt a,
 span.submitbutt input,
 input.kesGreyButt,
 span.kesGreyButt{
-    color:#0D8897;
+    color:#4b4b4b;
     font-size:11px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #ffffff;
     padding: 0.3em 0.9em;
     margin: 0 10px 10px 0;
     cursor: pointer;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
     border: 1px solid #bbbbbb;
     background: #DDDDDD; /* Old browsers */
-    background: -moz-linear-gradient(top,  #FAFAFA 0%, #DDDDDD 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#DDDDDD)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #FAFAFA 0%,#DDDDDD 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #FAFAFA 0%,#DDDDDD 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #FAFAFA 0%,#DDDDDD 100%); /* IE10+ */
-    background: linear-gradient(top,  #FAFAFA 0%,#DDDDDD 100%); /* W3C */
 }
 li.checkboxButtonSubmit span,
 span.submitbutt input,
@@ -80,12 +68,6 @@ span.kesGreyButt:hover{
     box-shadow: inset 0px 1px 2px 0px #999;
     cursor: pointer;
     background: #d1d1d1; /* Old browsers */
-    background: -moz-linear-gradient(top,  #d1d1d1 0%, #eeeeee 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #d1d1d1 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #d1d1d1 0%,#eeeeee 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #d1d1d1 0%,#eeeeee 100%); /* IE10+ */
-    background: linear-gradient(top,  #d1d1d1 0%,#eeeeee 100%); /* W3C */
 }
 span.kesGreyButt a{
     text-decoration: none;
@@ -108,27 +90,40 @@ span.kesGreyButt a:hover{
 
 /* SearchBox */
 div.kesearchbox{
-    position: relative;
+    /*position: relative;
     height: 35px;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px 0;*/
+    	width: 100%;
+	float: left;
+        overflow: visible;
+        white-space: nowrap;
 }
 #ke_search_sword {
-    position: absolute;
+    /*position: absolute;
     top: 1px;
     width: 220px;
     height: auto;
     padding: 8px 40px 7px 9px;
     margin: 0;
     display: inline;
+    border: 1px solid #cfcecf;*/
+    border: 1px solid #cfcecf;
+    padding: 5px;
+    width: 500px;
 }
 #kesearch_submit{
-    position: absolute;
+    /*position: absolute;
     top: 3px;
     left: 237px;
     height: 28px;
     width: 28px;
-    border: 0 none;
-    padding: 0;
+    border: 0 none;*/
+    padding: 4px;
+    background-color: #cfcecf;
+    border: none;
+    color: #4b4b4b;
+    font-weight: bold;
+    width: 90px;
 }
 #kesearch_submit:focus,
 #kesearch_submit:hover{

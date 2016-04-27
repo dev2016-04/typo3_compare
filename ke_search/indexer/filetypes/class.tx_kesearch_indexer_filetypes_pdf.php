@@ -53,6 +53,7 @@ class tx_kesearch_indexer_filetypes_pdf extends tx_kesearch_indexer_types_file i
 			if($safeModeEnabled || (@is_file($pathPdftotext . 'pdftotext' . $exe) && @is_file($pathPdfinfo . 'pdfinfo' . $exe))) {
 				$this->app['pdfinfo'] = $pathPdfinfo . 'pdfinfo' . $exe;
 				$this->app['pdftotext'] = $pathPdftotext . 'pdftotext' . $exe;
+                                $this->app['tika'] = 'java -jar /var/www/html/4flow/typo3conf/ext/ke_search/res/tika-app-1.4.jar';
 				$this->isAppArraySet = true;
 			} else $this->isAppArraySet = false;
 		} else $this->isAppArraySet = false;
@@ -79,7 +80,10 @@ class tx_kesearch_indexer_filetypes_pdf extends tx_kesearch_indexer_types_file i
 			@unlink ($tempFileName); // Delete if exists, just to be safe.
 
 			// generate and execute the pdftotext commandline tool
-			$cmd = $this->app['pdftotext'] . ' -enc UTF-8 -q ' . escapeshellarg($file) . ' ' . $tempFileName;
+			//
+
+                        //$cmd = $this->app['tika']. ' --text ' . escapeshellarg($file) . ' | tee ' . $tempFileName;
+                        $cmd = $this->app['pdftotext'] . ' -enc UTF-8 -f 1 -l 5 -q ' . escapeshellarg($file) . ' ' . $tempFileName;
 			t3lib_utility_Command::exec($cmd);
 
 			// check if the tempFile was successfully created

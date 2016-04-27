@@ -23,10 +23,10 @@ notificationSender = no_reply@domain.com
 notificationSubject = [KE_SEARCH INDEXER NOTIFICATION]
 
 # cat=filepath//10; type=string; label=Path to pdftotext: This path must be valid, if you want to extract content from pdf files
-pathPdftotext = /usr/bin/
+pathPdftotext = /usr/local/bin/
 
 # cat=filepath//20; type=string; label=Path to pdfinfo: This path must be valid, if you want to extract content from pdf files. We need pdfinfo to get the amount of pages within a pdf file
-pathPdfinfo = /usr/bin/
+pathPdfinfo = /usr/local/bin/
 
 # cat=filepath//30; type=string; label=Path to catdoc, catppt, xls2csv: This path must be valid, if you want to extract content from doc, xls and ppt files.
 pathCatdoc = /usr/bin/

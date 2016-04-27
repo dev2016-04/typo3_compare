@@ -52,6 +52,8 @@ class tx_kesearch_indexer_filetypes_xls extends tx_kesearch_indexer_types_file i
 			$exe = (TYPO3_OS == 'WIN') ? '.exe' : '';
 			if($safeModeEnabled || (@is_file($pathCatdoc . 'xls2csv' . $exe))) {
 				$this->app['xls2csv'] = $pathCatdoc . 'xls2csv' . $exe;
+                                $this->app['xls2txt'] = '/usr/local/bin/xls2txt' . $exe;
+                                $this->app['tika'] = 'java -jar /var/www/html/4flow/typo3conf/ext/ke_search/res/tika-app-1.4.jar';
 				$this->isAppArraySet = true;
 			} else $this->isAppArraySet = false;
 		} else $this->isAppArraySet = false;
@@ -71,7 +73,9 @@ class tx_kesearch_indexer_filetypes_xls extends tx_kesearch_indexer_types_file i
 		@unlink ($tempFileName); // Delete if exists, just to be safe.
 
 		// generate and execute the pdftotext commandline tool
-		$cmd = $this->app['xls2csv']. ' -c \' \' -q 0 -s8859-1 -dutf-8 ' . escapeshellarg($file) . ' > ' . $tempFileName;
+		//$cmd = $this->app['xls2csv']. ' -c \' \' -q 0 -s8859-1 -dutf-8 ' . escapeshellarg($file) . ' > ' . $tempFileName;
+                $cmd = $this->app['xls2txt']. ' ' . escapeshellarg($file) . ' > ' . $tempFileName;
+                //$cmd = $this->app['tika']. ' -d --text ' . escapeshellarg($file) . ' > ' . $tempFileName;
 		t3lib_utility_Command::exec($cmd);
 
 		// check if the tempFile was successfully created
